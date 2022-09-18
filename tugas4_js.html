@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 4 - Javascript</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            Pembelian Barang dengan Konversi Kurs
+        </div>
+        <div class="card-body">
+            <form id="frm">
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Nama Pembeli</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="nama">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Nama Barang</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="barang">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Harga Barang</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="harga">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Jumlah Barang</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="jum">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Valuta Asing</label>
+                    <div class="col-sm-10">
+                        <select name="valas" onchange="javascript:konversiKurs()" class="form-control">
+                            <option value="">-- Pilih Valas --</option>
+                            <option value="14917">-- USD --</option>
+                            <option value="10590">-- SGD --</option>
+                            <option value="14918">-- EUR --</option>
+                        </select>
+                    </div>    
+            </form>
+        </div>
+    </div>  
+    <div class="alert alert-primary" role="alert" id="isi">
+    Data pembelian: 
+    <p id="cust">Nama pembeli: </p>
+    <p id="barang">Nama barang: </p>
+    <p id="harbar">Harga barang: </p>
+    <p id="jumlah">Jumlah barang: </p>
+    <p id="valas">Valuta Asing: </p>
+    <p id="total">Total bayar: </p>    
+    </div>
+</body>
+<script>
+  /*
+  Hitunglah pembelian barang berdasarkan kurs valas yang dipilih.
+  (Event Handle Js nya: onchange ketika pilih valas)
+  Hasilnya ditempatkan pada paragraf yang ber-id-kan isi
+  */
+  
+  function konversiKurs () {
+      //Nama Customer
+  
+      let nama_pembeli = document.getElementById("frm").nama.value;
+      let input_customer =  "Nama Pembeli :" + " " + nama_pembeli;
+      let no_input = "Nama Pembeli :" + " " + '<font color = "red"> Harap nama diisi !!</font>';
+      let hasil = nama_pembeli != "" ? input_customer : no_input;
+      document.getElementById("cust").innerHTML = hasil;
+  
+      //Nama Barang
+  
+      let nama_barang = document.getElementById("frm").barang.value;
+      let input_nambar =  "Nama Barang :" + " " + nama_barang;
+      let no_input_nambar = "Nama Barang :" + " " + '<font color = "red"> Harap nama barang diisi !!</font>';
+      let hasil_nama = nama_barang != "" ? input_nambar : no_input_nambar;
+      document.getElementById("barang").innerHTML = hasil_nama;
+  
+      // Harga Barang
+  
+      let har_bar = document.getElementById("frm").harga.value;
+      let input_barang =  "Harga Barang :" + " " + har_bar;
+      let no_input_har_bar = "Harga Barang :" + " " + '<font color = "red"> Harap harga diisi dan berupa angka!!</font>';
+      let hasil_har_bar = har_bar == "" || isNaN(har_bar) ? no_input_har_bar : input_barang;
+      document.getElementById("harbar").innerHTML = hasil_har_bar;
+  
+      // Jumlah Barang
+  
+      let jum_bar = document.getElementById("frm").jum.value;
+      let input_jumlah =  "Jumlah Barang :" + " " + jum_bar;
+      let no_input_jumlah = "Jumlah Barang :" + " " + '<font color = "red"> Harap jumlah diisi dan berupa angka !!</font>';
+      let hasil_jumlah = jum_bar == "" || isNaN(jum_bar) ? no_input_jumlah : input_jumlah;
+      document.getElementById("jumlah").innerHTML = hasil_jumlah;
+      
+      //valuta asing
+      let val_as =  document.getElementById("frm").valas.value;
+      let input = "Valuta Asing :" + " " + val_as 
+      let val_mat = har_bar * jum_bar / val_as
+      let total =  "Total Bayar :" + " " + "$" + val_mat.toFixed(2);
+      document.getElementById("valas").innerHTML = input;
+      // total
+      document.getElementById("total").innerHTML = total;
+  }
+</script>    
+</html>
