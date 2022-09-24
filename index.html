@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+  <title>Tugas 7 - Javascript</title>
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".ayam").click(function() {
+        $(".img-unggas").attr({
+          'src': 'img/ayam.jpeg',
+          'width':'10%' 
+        });
+        $(".audio-unggas").attr({
+          'src': 'audio/ayam.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".angsa").click(function() {
+        $(".img-unggas").attr({
+          'src': 'img/angsa.jpg',
+          'width':'10%' 
+        });
+        $(".audio-unggas").attr({
+          'src': 'audio/ayam.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".bk").click(function() {
+        $(".img-unggas").attr({
+          'src': 'img/bk.jpg',
+          'width':'10%' 
+        });
+        $(".audio-unggas").attr({
+          'src': 'audio/bk.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".kenari").click(function() {
+        $(".img-unggas").attr({
+          'src': 'img/kenari.jpg',
+          'width':'10%' 
+        });
+        $(".audio-unggas").attr({
+          'src': 'audio/ayam.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".kobra").click(function() {
+        $(".img-buas").attr({
+          'src': 'img/cobra.jpg',
+          'width':'10%' 
+        });
+        $(".audio-buas").attr({
+          'src': 'audio/kobra.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".beruang").click(function() {
+        $(".img-buas").attr({
+          'src': 'img/beruang.jpg',
+          'width':'10%' 
+        });
+        $(".audio-buas").attr({
+          'src': 'audio/kobra.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".panther").click(function() {
+        $(".img-buas").attr({
+          'src': 'img/panther.jpeg',
+          'width':'10%' 
+        });
+        $(".audio-buas").attr({
+          'src': 'audio/kobra.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".macan").click(function() {
+        $(".img-buas").attr({
+          'src': 'img/macan.jpg',
+          'width':'10%' 
+        });
+        $(".audio-buas").attr({
+          'src': 'audio/kobra.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".sapi").click(function() {
+        $(".img-ternak").attr({
+          'src': 'img/sapi.jpg',
+          'width':'10%' 
+        });
+        $(".audio-ternak").attr({
+          'src': 'audio/sapi.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".kambing").click(function() {
+        $(".img-ternak").attr({
+          'src': 'img/kambing.jpeg',
+          'width':'10%' 
+        });
+        $(".audio-ternak").attr({
+          'src': 'audio/kambing.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".domba").click(function() {
+        $(".img-ternak").attr({
+          'src': 'img/domba.jpg',
+          'width':'10%' 
+        });
+        $(".audio-ternak").attr({
+          'src': 'audio/sapi.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+      $(".babi").click(function() {
+        $(".img-ternak").attr({
+          'src': 'img/babi.webp',
+          'width':'10%' 
+        });
+        $(".audio-ternak").attr({
+          'src': 'audio/sapi.mp3',
+          'volume': 0.4,
+          'autoplay': 'autoplay',
+          'controls': 'controls'
+        })
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Hewan Unggas
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <button type="button" class="btn btn-primary btn-lg angsa">Angsa</button>
+          <button type="button" class="btn btn-primary btn-lg kenari">Kenari</button>
+          <button type="button" class="btn btn-primary btn-lg bk">Burung Kakak Tua</button>
+          <button type="button" class="btn btn-primary btn-lg ayam">Ayam</button>
+          <img class="Image img-unggas">
+          <audio class="audio-unggas"></audio>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Hewan Buas
+        </button>
+      </h2>
+
+      <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <button type="button" class="btn btn-primary btn-lg kobra">Cobra</button>
+          <button type="button" class="btn btn-primary btn-lg beruang">Beruang</button>
+          <button type="button" class="btn btn-primary btn-lg macan">Macan</button>
+          <button type="button" class="btn btn-primary btn-lg panther">Panther</button>
+          <img class="Image img-buas">
+          <audio class="audio-buas"></audio>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Hewan Ternak
+        </button>
+      </h2>
+
+      <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <button type="button" class="btn btn-primary btn-lg sapi">Sapi</button>
+          <button type="button" class="btn btn-primary btn-lg kambing">Kambing</button>
+          <button type="button" class="btn btn-primary btn-lg domba">Domba</button>
+          <button type="button" class="btn btn-primary btn-lg babi">Babi</button>
+          <img class="Image img-ternak">
+          <audio class="audio-ternak"></audio>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- <button type="button" class="btn btn-danger btn-lg" value="Sapi">Sapi</button>
+  <button type="button" class="btn btn-danger btn-lg" value="Kambing">Kambing</button>
+  <button type="button" class="btn btn-info btn-lg" value="Kobra">Kobra</button>
+  <button type="button" class="btn btn-warning btn-lg" value="Katak">Katak</button> -->
+</body>
+</html>
